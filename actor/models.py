@@ -30,8 +30,8 @@ class Movie(models.Model):
 
 class Actor_Movie:
   id=models.AutoField(primary_key=True)
-  actor=models.ForeignKey("Actor", on_delete=models.CASCADE(),db_constraint="actor")
-  movie=models.ForeignKey("Movie",on_delete=models.CASCADE(),db_constraint="movie")
+  actor=models.ForeignKey("Actor", on_delete=models.CASCADE,db_constraint="actor")
+  movie=models.ForeignKey("Movie",on_delete=models.CASCADE,db_constraint="movie")
 
   class Meta:
     db_table="actors_movies"
